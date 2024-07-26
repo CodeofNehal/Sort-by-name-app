@@ -1,0 +1,39 @@
+<html>
+   <head>
+     <title>Name Application</title>
+      <style>
+          *{
+              font-size:40px;
+              font-family:Calibri;
+              background-color:linen;
+           }
+      </style>
+   </head>
+   <body>
+       <center>
+           <h1>Sort My Name Application</h1>
+           <form onsubmit="show()">
+               <input type="text" id="name" placeholder="enter your name">
+               <br><br>
+               <input type="submit">
+           </form>
+               <h2 id="msg"/>
+           <script>
+               function show()
+               {
+                  event.preventDefault();
+                  
+                  let name=document.getElementById("name");
+                  let msg=document.getElementById("msg");
+
+                  let n=name.value;
+                  let r1=n.split("");
+                  r1.sort();
+                  let nn=r1.join("");
+                  msg.innerHTML=nn;
+
+                                 }
+           </script>
+       </center>
+   </body>
+</html>
